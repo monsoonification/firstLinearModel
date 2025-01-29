@@ -14,3 +14,5 @@ set_optimizer(TBmodel, HiGHS.Optimizer)
 @objective(TBmodel, Max, 12 * fTroph + 9 * sTroph)
 
 optimize!(TBmodel)
+println("Value of soccer trophies: ", value(sTroph))
+println("Value of football trophies: ", value(fTroph))
